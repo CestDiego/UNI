@@ -20,7 +20,7 @@ It's know that the formula that renders this correctly is the Shockley formula
     return p1*np.cos(p2*x) + p2*np.sin(p1*x)
 #+end_src
 ** Results of formula
-#+begin_src python :noweb yes :results file :exports results
+#+begin_src python :noweb yes :results file :exports both
   import numpy as np
   import scipy
   import math
