@@ -87,12 +87,6 @@ It's know that the formula that renders this correctly is the Shockley formula
       return filepath
 #+end_src
 
-#+begin_src python
-print "no me jodas"
-#+end_src
-
-
-
 #+begin_src python :noweb yes :var data=le_data :results file :exports both
   <<smart_plot>>
   import numpy as np
