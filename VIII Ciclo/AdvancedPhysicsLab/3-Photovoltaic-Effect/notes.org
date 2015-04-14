@@ -1,0 +1,110 @@
+* Le_ notes taken for Photo Voltaic Effect Experiment
+
+** Diode Modeling Formula
+It's know that the formula that renders this correctly is the Shockley formula
+[[https://www.wikiwand.com/en/Diode_modelling][Here you can read more about it]].
+[[file:img/shockley.png]]
+
+#+begin_src python :noweb-ref IvsV
+  import numpy as np
+  def IvsV(t, Is, n):
+      return Is * np.exp(t) / n
+#+end_src
+
+#+RESULTS:
+: None
+
+#+begin_src python :noweb-ref test-func
+  import numpy as np
+  def test_func(x, p1, p2):
+    return p1*np.cos(p2*x) + p2*np.sin(p1*x)
+#+end_src
+** Results of formula
+#+begin_src python :noweb yes :results file :exports results
+  import numpy as np
+  import scipy
+  import math
+  import matplotlib.pyplot as plt
+  from scipy.optimize import curve_fit, leastsq
+
+  <<IvsV>>
+  <<test-func>>
+
+  xdata = np.linspace(-10, 10, 200)
+  temp = test_func(xdata, 1, 1.2)
+  ydata = temp + 0.25*np.random.normal(size=len(temp))
+
+  err = math.sqrt(len(xdata))
+  popt, pcov = curve_fit(test_func, xdata, ydata, [1,1], err)
+
+  plt.ylabel('Corriente (A)', fontsize = 16)
+  plt.xlabel('Voltage (V)', fontsize = 6)
+  plt.xlim(0,4.1)
+  # plot the data as red circles with vertical errorbars
+  plt.errorbar(xdata, ydata, fmt = 'ro', yerr = 0.2)
+  # now plot the best fit curve and also +- 1 sigma curves
+  # (the square root of the diagonal covariance matrix
+  # element is the uncertianty on the fit parameter.)
+  sigma = [
+      pcov[0, 0],
+      pcov[1, 1],
+  ]
+
+  plt.plot(
+      xdata, test_func(xdata, popt[0], popt[1]),
+      xdata, test_func(xdata, popt[0] + sigma[0], popt[1] - sigma[1]),
+      xdata, test_func(xdata, popt[0] - sigma[0], popt[1] + sigma[1]),
+  )
+  # save plot to a file
+  plt.savefig('img/dataFitted.png', bbox_inches=0)
+  return 'img/dataFitted.png'
+#+end_src
+
+#+RESULTS:
+[[file:img/dataFitted.png]]
+
+
+** Le Data
+
+#+tblname: le_data
+| Voltage | Current |     Power | Efficiency |
+|---------+---------+-----------+------------|
+|       4 |       3 | 6.8921901 |        2.2 |
+|       2 |      32 | 48.502930 |       2.34 |
+|       3 |    23.2 | 44.849823 |        2.7 |
+#+TBLFM: $3=$2*($1**0.6)
+
+#+begin_src python :noweb-ref smart_plot
+  import matplotlib.pyplot as plt
+
+  def smart_plot(x, y, le_filename, title='default'):
+      plt.title(title)
+      fig=plt.figure(figsize=(4,2))
+      plt.plot(x,y)
+      fig.tight_layout()
+      filepath = 'img/' + le_filename + '.png'
+      plt.savefig(filepath)
+      return filepath
+#+end_src
+
+#+begin_src python
+print "no me jodas"
+#+end_src
+
+
+
+#+begin_src python :noweb yes :var data=le_data :results file :exports both
+  <<smart_plot>>
+  import numpy as np
+  data = np.array(data)
+  x = data[:, 2]
+  y = data[:, 3]
+  le_filename = "second"
+  title = r'$\sigma_i=15$'
+  return smart_plot(x, y, le_filename, title)
+#+end_src
+
+#+RESULTS:
+[[file:img/second.png]]
+
+

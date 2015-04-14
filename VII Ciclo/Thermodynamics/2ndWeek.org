@@ -1,0 +1,388 @@
+* 4 pasos para resolver problemas de estadística.
+Vamos a aplicar las cosas que debemos hacer en los problemas.
+- Especificación del estado del sistema
+
+- Debemos tener un Conjunto Estadístico
+Aquí se llama un Ensamble. En física estadística no se considera un
+sólo sistema sino una colección de sistemas idénticos.
+- Necesitamos postulados básicos o también llamados (probabilidades a priori)
+- Cálculo del Problema
+
+** Especificación del estado del Sistema
+- Ejemplo 1
+Partícula con Spin ½
+ |½ , ½ > , | ½ , -½ >
+Estos son los spines que son respectivamente el spin hacia arriba o el de hacia abajo.
+- Ejemplo 2
+N Partículas de spin ½
+
+
+|m_1, m_2, m_3, ... , m_n >
+
+
+Cada uno de estas partículas puede ser de spin ½ o -½ para N grande,
+por ejemplo N= N a = 6.02x10²³
+- Ejemplo 3
+Oscilador Armónico 1-dim
+|n> n = 0,1,2.....
+En = hw(n+½)
+- Ejemplo 4
+N Osciladores armónicos
+| n1, n2, .... ,n N >
+ni = 0,1,....
+V i \epsilon {1,2,....,N}
+- Ejemplo 5
+En un cubo las 3 dimensiones de este son Lz,Ly,Lx y entonces la
+función de onda para una partícula en este cubo sería:
+
+\Psi(x,y,z) = Sen(n\pi x / Lx) Sen(n\pi y / Ly) Sen(n\pi z / Lz)
+
+** Conjunto Estadístico
+
+En general, sea la descripción cuántica o la descripción clásica para
+especificar el estado de un sistema nosotros vamos a enumerar todos
+los estados posibles para poder obtener ese espacio muestral.
+
+En el caso de los estados cuánticos se niumerará usando el índice r, con
+
+
+r=1,2,3....
+
+Nosotros usaremos la notificación de una función de onda con su número
+cuántico r correspondiente, esto es que todosl os sistemas posibles se
+dan para el conjunto de la variación de toda la función de onda con el
+número cuántico
+
+Ahora en vez de considerar un único sistema con varios estados, vamos
+a considerar muchos sistemas idénticos, pero no implica que estarán en
+el mismo estado. Esto es , un Ensamble (Conjunto en francés)
+
+**** Ejemplo
+Sean 3 partículas de spin ½ en un campo magnético con intensidad H
+
+
+Sea \mu = \gamma s
+
+E = - \mu . H
+
+| r | m1,m2,m3 | Total de Momento Magnetico | Total de Energía |
+|---+----------+----------------------------+------------------|
+| 1 | + + +    | 3\mu                       | -3\mu H          |
+| 2 | + + -    | \mu                        | -\mu H           |
+| 3 | + - +    | \mu                        | -\mu H           |
+| 4 | - + +    | \mu                        | -\mu H           |
+| 5 | + - -    | -\mu                       | \mu H            |
+| 6 | - + -    | -\                       | \mu H            |
+| 7 | - - +    | -\mu                       | \mu H            |
+| 8 | - - -    | -3\mu                      | 3\mu H           |
+
+ Típicamente se conoce información parcial del sistema, es decir
+conocemos un parámetro macroscópico que no necesariamente nos daría
+información detallada.
+
+**** Ejercicio
+Supondremos que el sistema de 3 spines especificado anteriormente de ½
+está aislado, lo que significa que no intercambia energía con el
+exterior. En este caso son sólo hay un sistema de 3 espines, pero en
+TermoEstadística lo que haremos es considerar muchos sistemas
+idénticos de 3 spines. Cada uno con una configuración no
+necesariamente igual a los demás pero siempre considerando que la
+energía se conserva.
+
+**** Consideremos
+Conocemos el parámetro macroscócpo de Energía Total E = - \mu H.
+
+Esto nos deja con los posibles estados cuánticos r=2,3,4
+
+La sub-colección de estados compatibles con la energía total E = - \mu
+H se llama el *Conjunto de estados compatibles*
+
+Esto quiere decir que el sistema se encuentra en uno de estos estados,
+o ya más generalmente se podría decir que está en una combinación
+lineal de todos estos, ya que igual haría que la energía total se
+conserve.
+
+{(+ + -), (+ - +), (- + +)}
+
+** Postulados Básicos
+- En general existe un número grande de estados accesibles
+- Estar en equilibrio implica que la probabilidad de estar en un
+  estado accesible particular NO depende del tiempo
+- Para sistemas *aislados en equilibrio* TODOS los parámetros son
+  independientes del tiempo
+- Sólo se sabe que el sistema tiene que estar en uno de los estados
+  accesibles
+- Las leyes de la mecánica cuántica no permiten calcular las
+  probabilidades de cada estado accesible
+- Es lógico suponer que cuando se tiene sistemas aislados en
+  equilibrio las probabilidades de cada estado accesible son iguales
+
+(Hipótesis  + veríficada muchas veces) --> Postulado
+
+- La distribución de probabilidad de los estados accesibles es Uniforme
+- Una vez que un sistema adquiere el equilibrio permanecerá en tal hasta
+ que un agente externo lo saque del equilibrio (Inercia)
+**** Ejemplo
+
+( + + -) ,  ( + - +), ( - + + )
+
+Cualquiera de estos tiene una probabilidad de 1/3
+**** Ejemplo 2
+
+Oscilador armónico unidimensional ( Aproximación clásica)
+
+E = p²/2m + ½Kx²
+
+
+Supongamos que la energía toma valores entre E y E+\delta E
+
+Si llevamos esto al espacio fásico de P VS X entonces tendríamos la
+imágen de una elipse para cada valor de energía, entonces para E y E +
+\delta E habrán elipses para valores entre estos dos topes se tiene
+una distribución de la posición. Cuya probabilidad se ve dada por la
+relación entre los estados accesibles que se tenga entre las dos
+elipses dibujadas y el 'numero total de elipses que pueden caber en el
+area que se forma entre las dos elipses'
+
+Pero obviamente si se tiene que todos los posibles espacios que se
+puedan llenar en el area formada por las dos elipses son iguales,
+entonces la probabilidad por definición para cada uno de todos estos
+estados de posición es la misma.
+
+
+*Sin embargo*, si las probabilidades de los estados cuánticos son
+ diferentes entre sí, decimos que el sistema no está en equilibrio.
+ Eventualemete el sistema va a tender hacia la condición de
+ equilibrio. (Es decir las probabilidades cambian con el tiempo)
+ Eventualmente el sistema va a tender hacia la condición de equilibrio
+
+| Sistema que no está en equilibrio | ----->      | Sistema que está en equilibrio |
+| Aislado(Cerrado)                  | 1 seg       |                                |
+|                                   | 1 siglo     |                                |
+|                                   | Se le llama |                                |
+|                                   | Tiempo de   |                                |
+|                                   | Relajación  |                                |
+
+
+
+Como ejemplo de proceso de conversión al equilibrio se tiene este
+ejemplo, Se teiene un recibpiente dividido en dos, en una parte está
+lleno con moléculas de cierto tamaño y en la otra mitad está vacío, lo
+que se hace como experiencia es separar la división del recipiente,
+pasa de un estado en equilibrio en ambas partes a un sistema de no
+equilibrio porque ya entran en contacto ambas partes de diferente
+densidad de moléculas, lo que pasará a continuación es que el sistema
+nuevo comenzará a moverse y distribuyendo su energía dentro de toda la
+caja.
+
+Existen Sistemas con estados de equilibrio meta-estable
+**** Bibliografía recomendada
+- Teorema H - Apéndice A12 - Reif : Fundamentos de Termodinámica Estadística
+- *Tolman - Principles of Statistical Mechanics (Caracterisación de los estados Microscópicos)* Very important and hard
+- Callen - Thermodynamics: an introduction to Thermostatistics (2nd edition) (Macroscopía)
+-
+- EXTRA: Fórmulas matemáticas - Schaum Series Apiegel
+- Variables aleatorias HSU,
+** Cálculo de Probabilidad
+Considerar un conjunto de sistemas que están caracterizados por terner
+la energía entre E y E + \delta E
+
+- \Omega(E) Es el número total de estados accesibles
+  \Omega(E,y_k)  k = 1,2,3,.....
+donde se considera un parámetro macroscópico y que toma valores y_1,y_2,.... (ejemplos de y como presión, momento magnético, etc)
+
+\Omega (E,y_k) = número de estados accesibles con valor específico y_k de parámetro y 0
+
+\Omega(E) > \Omega(E, y_k) V k
+
+P(y_k) = \Omega(E, y_k) / \Omega(E)
+
+
+Ejemplo de 3 partículas con espín ½
+
+(+ + -), (+ - +), (- + +)
+
+
+Consideremos la segunda partícula con espín ½. Tenemos que la segunda partícula tiene los siguientes estados
+
+- + En el primer caso
+- - En el segundo caso
+- + En el tercer caso
+
+  Sea P (Segúnda partícula tenga m_s = ½)
+
+y ---> Proyección del espín de la segunda partícula
+
+y_1 = ½     \Omega (E,½) = 2
+y_2 = -½    \Omega (E)   = 3
+** Comportamiento de la densidad de estados
+
+Sistema macroscópico es igual a muchos grados de libertad,se dividirá
+la energía E en intervalos pequeños iguales a \delta E, con \delta E
+<< E. y a cada \delta E es una medida de precisión al medir E, esto es
+la escala mínima que nos permite tener el instrumento de medición.
+
+Aunque \delta E sea pequeño (macroscópicamente) El intervalo cubierto
+por \delta E contiene muchos estados posibles (microscópicamente). Ojo
+que no es igual al número de estados accesibles. Tan sólo son estados
+posibles.
+
+Luego de esto podemos ver que \Omega(E) es el número de estados cuya
+energía está entre E y E + \delta E.
+
+
+\Omega(E) = W(E)\delta E
+
+Esto quiere decir que \Omega(E) va a ser
+proporcional a \delta E, a la nueva cantidad que vemos aquí (W(E) la
+llamaremos densidad de estados, además W(E) *no* depende de \delta E
+
+Se hará luego un estimado de \Omega (E) en función de f (grados de
+libertad), por lo tanto luego se tiene.
+
+*f* números de estados cuánticos para especificar cada estado posible.
+
+*\Phi(E)* número de estados cuánticos posibles con energía menor que
+E(función creciente)
+
+Cuando uno quiera calcular el \Omega(E) sería como calcular el total
+de estados dentro de un cascarón (WTF?!)
+
+\Phi_1 \alpha \epsilon^\alpha   con \alpha \approx 1
+
+\epsilon es la contribución a la energía de un grado de libertad, que
+es proporcional a la razón entre la Energía total y el número de
+estados cuánticos:
+
+\epsilon \alpha E/f => \Phi(E) \approx [\Phi_1(E)]^f *Check Tolman*
+
+f ~ 10^23  N_A = 6.023 x 10^23
+
+\Omega(E) = \Phi(E+\delta E) - \Phi(E)
+
+\Omega(E) \approx \Delta Phi /\Delta E \delta E
+
+\Omega(E) \approx f \Phi_1^f-1 \Delta Phi_1 /\Delta \epsilon (1/f) \delta E
+
+\Omega(E) \approx \Phi_1^f-1 (\Delta \Phi_1 /\Delta \epsilon) \delta E
+
+Se iene que \Omega(E) y W(E) crecen extremadamente rápido con E.
+
+ln(\Omega) = (f-1) ln \Phi_1 + ln(\Delta\Phi_1 /\epsilon   \delta E)
+
+*Se argumenta que \Delta \Phi_1 /\epsilon \delta E \approx 1* por ende
+ este término en el logaritmo de éste término se desprecia y como f >> 1 entonces queda
+
+ln \Omega = f ln \Phi_1
+
+\Omega(E,f) \approx \Phi_1^f \alpha E^f
+
+*** Gas ideal en el límite clásico
+
+N moléculas idénticas en un volumen V
+
+E = K + U + E_int
+
+K: Energía Cinética
+
+U: Energía potencial entre las moléculas
+
+E_int: Energía de rotación y/o vibración de los átomos que constituyen las moléculas
+
+$K = \frac{1}{1m} \sum\limits_{i=1}^N P_i^2 = K(P_1,P_2,....,P_N)$
+
+
+U(r_1,r_2,....,r_N) Depende de las separaciones relativas entre las
+moléculas que interactúan.
+
+- Si las moléculas son monoatómicas => la energía interna E_int = 0
+/si las moléculas son poliatómicas se debe considerar E_int \neq 0
+
+E_int(Q_1,Q_2, ..., Q_M, P_1, ... , P_M)
+
+nos restringimos al caso simple de moléculas monoatómicas => E_int =0
+(Modelo ideal monoatómico) Esta aproximación es útil cuando la
+concentración $\frac{N}{V}$ es pequeña.
+
+Cálculo de \Omega(E) , se supone que E >> E_fundamental
+
+\Omega(E) mide el número de estados, es decir , las celdas elementales
+en el espaciond e fases clásico entre E y E + \delta E
+
+$$ \Omega(E) \alpha \int_E^{E+\delta E} ... \int\mathrm{d}^3 r_1 ...
+\mathrm{d}^3 r_N \mathrm{d}^3 p_1 ... \mathrm{d}^3 p_N \mathrm{d} Q_1
+... \mathrm{d} Q_N \mathrm{d} P_1 ... \mathrm{d} P_M = V^N \chi(E) $$
+
+Se tiene
+$$\mathrm{d}^3 r_i = \mathrm{d}x_i \mathrm{d} y_i \mathrm{d} z_i \forall i = 1,..,N $$
+$$\mathrm{d}^3 p_i = \mathrm{d}P_xi \mathrm{d} P_yi \mathrm{d} P_zi \forall i = 1,..,N $$
+
+E = K (no depende de r_i)
+
+$$ \int \mathrm{d}^3 \vec{r_i} = V    \forall i = 1,..,N$$
+
+$$ \chi(E) = \int_E^{E+\delta E} ... \int \mathrm{d}^3 p_1 ...
+\mathrm{d}^3 p_N \mathrm{d} Q_1 ... \mathrm{d} Q_N \mathrm{d} P_1 ...
+\mathrm{d} P_M $$
+
+$$ [(2mE)^{\frac{1}{2}} ]^2 = \sum\limits_{i=1}^N \sum\limits_{\alpha = 1}^3 P_{i\alpha}² $$
+
+$$ R =(2mE)^{\frac{1}{2}}  $$
+
+$$ P_i^2 = P_1i^2 + P_2i^2 + P_3i^2 $$
+
+$$ \Phi(E) = R^f = (2mE)^{\frac{f}{2}} $$
+
+
+Primero se calcula el \Phi, luego tomando la derivada se calculará el \Omega.
+
+$$ => \Omega(E)\ \alpha\ E^{\frac{f}{2} -1}\ \alpha\ E^{\frac{3N}{2} -1 } $$
+
+$$ \Omega(E) = B V^N E^{\frac{3N}{2}} $$
+
+$$ B \in \mathbb{R} $$
+
+
+** Interacción Térmica
+Sistema A 0 constituido por 2 partes A y A', Cada uno contiene sus
+parámetros macroscópicos como lo so Volumen V, Número de partículas N.
+
+Sólo está permitido el intercambio de enrgía pero no de matería o
+partículas, por eso este sistema se denomina interacción térmica.
+
+Microscópicamnete esto significa lo siguiente:
+
+A (Antes de la interacción térmica) tendrá una cierta separación entre
+sus niveles de energía, y al final de la interacción térmica se tendrá
+la misma distribución de niveles de energía cuánticos, ya que las
+condiciones macroscópicas no cambian para ninguno.
+
+Sin embargo la distribución de los sistemas idénticos en los niveles
+de energía variarán de acuerdo a como se tenga que hacer las
+operaciones.
+
+
+*insert image here*
+
+Se tiene que lo que pierda o gane A en esta interacción es decir: Q, debe compensarse con lo que pierda o gane A' (Q')
+
+Queda entonces:
+
+$$ Q + Q' = 0 $$
+
+
+** Interacción Mecánica
+
+Existe cambio de energía entre los dos subsistemas A y A' con cambio
+de parámetros macroscópicos y además no se permite interacción térmica.
+
+Cambia la separación entre niveles de energía y también cambia la
+degeneración de los niveles de energía. Antes cuando había interacción
+térmica sólo cambiaba la población de los niveles de energía pero
+manteniendo los niveles de energía constantes, ahora sin embargo lo
+que cambian son los niveles de energía que fueron afectados por la
+interacción mecánica, esto causa una diferencia de la Energía que no
+se debe por el ordenamiento sino por la energía global. Esta
+diferencia de energía por tanto ya no se llamará Q como en el caso
+térmico, sino que ahora se llamará W que es alusivo al Trabajo que se
+uso para este tipo de interacción

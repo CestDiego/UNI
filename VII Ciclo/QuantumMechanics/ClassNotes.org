@@ -1,0 +1,261 @@
+Ejercicios Sugeridos: Libro Introduction to Quantum Mechanics Griffiths 2nd Edition
+4.18, 4.28, 4.29, 4.30, 4.31, 4.34, 4.35
+
+*  Axiomas de la Mecánica cuántica
+** Axioma 1
+Todo sistema físico es completamente descrito con ua fuente de onda \Psi en un espacio de Hilbert.
+** Axioma 2
+Para todo observable físico existe un operador hermitiano en H.
+$$ x -> \vec{x} $$
+$$ p -> \delta_x $$
+$$ ? -> \vec{s} $$
+** Axioma 3
+Los únicos resultados posibles de la medida de un observable es un
+valor del operador correspondiente.
+** Axioma 4
+Si un sistema está en un estado \Psi entonces la probabilidad de
+obtener valores entre \lambda_1 y \lambda_2 es
+
+$$ P(\lambda_1, \lambda_2) = || \Psi ||^2 = || (E(\lambda_2) - E(\lambda_1) )\Psi ||^2$$
+
+E(\lambda) es la resolución de la indentidad del observable A (*WHAT*
+libros de análisis funcional, teoría de la medida, Libro de análisis funcional es Bresis)
+** Axioma 5
+En todo sistema existe un operador hamiltoniano H que determina la evolución temporal.
+
+$$ \Psi (t_1) -> \Psi(t_2) $$
+$$ t_1 < t_2 $$
+$$ H\Psi(x,t) = i\hbar \frac{\partial\Psi(x,t)}{\partial t} $$
+* Resultados de la clase anterior
+Aquí \mu es el momento angular o tiene que ver con ello, checka el Gridffiths
+Se tiene:
+$$ J_\pm = J_1 \pm iJ_2 $$
+$$ [J_3,J_\pm] = \pm \hbar J_\pm $$
+$$ [J^2, J_\pm] = 0 $$
+
+$$ J^2 = J_\pm J_\mp + J_3^2 \mp\hbar J_3 $$
+
+De donde:
+
+$$ J_3 (J_\pm f) = (\mu \pm \hbar)(J_\pm f) $$
+
+\begin{equation}
+\label{baseeq}
+\begin{split}
+J_3 f & = \mu f   \\
+J^2 f & = \lambda f ---> (\lambda > 0) \\
+\mu,\lambda \in \mathbb{R}
+\end{split}
+\end{equation}
+
+
+$$ -\sqrt\lambda \leq \mu \leq \sqrt\lambda $$
+$$ <J^2> \geq <J_3> -> \lambda \geq \mu^2  $$
+
+Hasta ahora se tiene que el operador J_- o J + sube de energía a los
+\mu en un \hbar. Como se ve en la siguiente figura. *Insert Image Here*
+
+Por el teorema del supremo en este espacio acotado de energías, se
+tendrá que hay un \mu_máx y este será igual a
+
+$$ \mu_máx = l\hbar $$
+
+Y se tendrá que en este \mu_máx si se aplicara de nuevo el operador de
+creación J + se tendría
+
+$$ J + f_t = 0 $$
+
+Lo mismo pasaría del otro extremo
+
+$$ J - f_b = 0 $$
+
+Al aplicar J^2 (la versión con el +) a f_t
+
+\begin{equation}
+\label{eq1}
+\begin{split}
+  J^2 f_t & = (J_- J + + J_3^2 + \hbar J_3) f_t \\
+          & = J_-(J + f) + (J_3^2 + \hbar J_3)f_t \\
+          & = [(l\hbar)^2 + \hbar l\hbar] f_t \\
+          & = \hbar^2 (l) (l+1)f_t \\
+
+\end{split}
+\end{equation}
+
+$$ l \in \mathbb{R} $$
+
+$$ \lambda = \hbar^2 (l) (l+1) $$
+
+Similarmente aplicamos la versioón con el - a f_b
+
+\begin{equation}
+\label{eq2}
+\begin{split}
+  J^2 f_t & = (J_- J + + J_3^2 - \hbar J_3) f_t\\
+          & = J_-(J + f) + (J_3^2 - \hbar J_3)f_t \\
+          & = [(l\hbar)^2 - \hbar l\hbar] f_t \\
+  & = \hbar^2 (l) (l-1)f_t \\
+
+\end{split}
+# l \in \mathbb{R}\\
+
+# \lambda = \hbar^2 (l) (l+1)
+\end{equation}
+
+Por lo tanto podemos tener que.
+$$J_3(J + f ) = (\mu + \hbar)(J + f) $$
+$$ \J^2(J + f) = \lambda(J + f) $$
+
+$$ \hbar^2 l (l + 1) = \hbar^2 \vec{ l } (\vec{l} - 1) $$
+$$ \vec{l} = l + 1 -> \vec{l} > l, ESTO ESTA MAL $$
+$$ \vec{l} = -l , l \in \mathbb{R}$$
+
+
+$$ l = -l + N, \: N=0,1,2,...$$
+
+$$ l = \frac{N}{2} $$
+
+
+Para cada l existen iguales valores propios de J_3 que representamos
+con m de la siguiente manera
+
+$$ J_3 f_{lm} = m\hbar f_{lm} $$
+$$ J^2 f_{lm} = \hbar^2 l(l+1) f_{lm} $$
+** Ejemplo con Spin 1/2
+
+Cuando consideramos el espín de 1/2 se considera como partícula de
+estudio al electrón, protón, neutrón, quark, leptons, etc. Lo que se
+hará ahroa es un ejemplo en el que se suman dos espines 1/2 es decir
+el acoplamiento de dos partículas con spin 1/2. Todos las partículas
+que tienen espín 1/2 son fermiones, las que tienen espín entero son
+bosones como el fotón y el gravitrón.
+
+Cuando se etudia teoría de momento angular siempre se tienen 3
+operadores, y en este caso como es un caso específico de Spín,
+usaremos S_x, S y, S z, y también consideraremos a un S^2. La relación
+de conmutación que consideraremos será la siguiente:
+
+$$ [S_x,S_y] = i\hbar S_z $$
+$$ [S_y,S_z] = i\hbar S_x $$
+$$ [S_z,S_x] = i\hbar S_y $$
+
+Se seleccionan 2 operadores del Conjunto de operadores Momento angular
+{S_x, S y, S_z, S^2}
+
+Este submonjunto {S_z, S^2} se denomina un cConjunto completo de
+operadores conmutantes entre sí, podría haberse tomado cualquier
+componente del conjunto principal pero por convención se utilizará el
+S_z.
+
+$$ S^2 |sm> = \hbar^2 s(s+1) |sm>  s= \frac{1}{2} $$
+$$ S_z |sm> = \hbar m |sm> $$
+
+s: número cuántico del espín
+
+m: número cuántico de proyección del espín a lo alrgo del eje Z
+*** Ejercicio
+
+$$ S_\pm = S_x \pm iS y $$
+
+Verificar que se cumpla
+
+$$ S_\pm |sm> = \hbar \sqrt{s(s+1) - m(m+1)} |s(m\pm1)> $$
+*** Ejemplos
+Sustituir S=½
+
+\begin{equation}
+\begin{split}
+S^2 |sm> & = \hbar^2 (\frac{1}{2})(\frac{1}{2} + 1) |sm> \\
+         & = \hbar^2(\frac{3}{4}) |sm>
+\end{split}
+\end{equation}
+
+Los valores posibles de m son -½ y ½
+
+2s+1 = 2(½) + 1 = 2
+
+2s+1: Número de valores diferentes posibles
+
+$$ | \uparrow >  = | ½ , ½ >$$
+$$ | \downarrow >  = | ½ ,- ½ >$$
+
+Existen 2 vectores linealmente independientes de tal modo que
+$$ {|\uparrow>, |\downarrow>} $$
+
+constituyen una base.
+
+UN estado general se expresa mediante una combinación lineal (con coeficientes cojmplejos)
+
+$$ | \Psi > = a |\uparrow > + b | \downarrow> $$
+
+Con $a,b \in \mathbb{C}$
+
+Notación:
+$$ |\uparrow> = (1 0) | vertical = \chi + $$
+$$ |\downarrow> = (0 1) | vertical = \chi - $$
+
+$$ \Psi_{½½} = | \frac{1}{2}, \frac{1}{2}> = | \uparrow> = (1 0) vertical = \chi + $$
+$$ \Psi_{½-½} = | \frac{1}{2}, -\frac{1}{2}> = | \chinarro> = (0 1) vertical = \chi - $$
+
+Un estado general es \chi.
+$$ \chi = a\chi + = b\chi - $$
+*** Suma de momento angular
+$$ S^2, S_z$$
+Sabemos que
+
+\left\{
+\begin{array}
+S^2 \chi +  = \frac{3}{4} \hbar^2 \chi +\\
+S^2 \chi -  = \frac{3}{4} \hbar^2 \chi -\\
+\end{array}
+
+Cuado se usa funciones de onda con columnas de 2 componentes se dice
+que se está usando la representación espinorial.
+
+$$ \chi = a\chi + = b\chi - $$
+
+\begin{pmatrix}
+a\\b
+\end{pmatrix}
+ = a
+\begin{pmatrix}
+1\\0
+\end{pmatrix}
+\plus b
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+
+Calculamos la representación del operador S^2
+
+S^2 =
+\begin{pmatrix}
+c & d\\e & f
+\end{pmatrix}
+
+$$ c,d,e,f \in \mathbb{C} $$
+
+Aplicando  S^2 en \chi +
+
+
+
+Similarmente aplicamos S^2 en \chi = \begin{pmatrix}0\\1\end{pmatrix}
+
+
+Bransden
+\begin{pmatrix}
+c & d\\e & f
+\end{pmatrix}
+
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+= \hbar^2 \frac{3}{4}
+\begin{pmatrix}
+0\\1
+\end{pmatrix}
+
+
+
+
+*Check out this book Devanathan, Angular MOmentum in Quantum Mechanics*
