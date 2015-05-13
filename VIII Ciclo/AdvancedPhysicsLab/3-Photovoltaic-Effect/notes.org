@@ -6,7 +6,7 @@
 * Le_ notes taken for Photo Voltaic Effect Experiment
 
 ** Diode Modeling Formula
-hleo @@html:<kbd>hey</kbd>@@
+hleo <kbd>hey</kbd>
 It's know that the formula that renders this correctly is the Shockley formula
 [[https://www.wikiwand.com/en/Diode_modelling][Here you can read more about it]].
 [[file:img/shockley.png]]
